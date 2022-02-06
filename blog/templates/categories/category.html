@@ -1,0 +1,14 @@
+{% extends 'layouts/layouts.html'%}
+
+{%block title %}{{category.name}}{%endblock%}
+
+{%block content%}
+    <h1 class="title">{{category.name}}</h1>
+    <p>{{category.description}}</p>
+
+    {% include 'tvshows/tvshows.html' with tvshows=category.tvshow_set.all %}
+
+    {% include 'movies/movies.html' with movies=category.movie_set.all %}
+
+
+{%endblock%}

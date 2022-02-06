@@ -1,0 +1,40 @@
+{% for movie in movies%}
+    <div class="article-item">
+        <movie>
+            {% if movie.image != 'null'%}
+                <a href="{% url 'movie' movie.id %}">
+                    <div class="image">
+                        <figure>
+                            <img src="{{movie.image.url}}" />
+                        </figure>
+                        <span>{{movie.title}}</span>
+                    </div>
+                </a>
+            {% endif %}
+
+            
+            <div class="data">
+            <h2>
+                <a href="{% url 'movie' movie.id %}" class="urls">{{movie.title}}</a>
+            </h2>
+                {% for category in movie.categories.all%}
+                    <a href="{% url 'category' category.id %}" class="urls">{{category.name}}</a>
+                    {% if not forloop.last %}-{% endif %}
+                {% endfor %}
+                <span class="date">
+                    <!--el firs y last name lo podemos ver desde la base de datos. No siempre se llama asi. Es cosa del programa.-->
+                    {{ movie.user.first_name|title }} {{ movie.user.last_name|title }}
+                    |
+                    {{ movie.created_at }}
+                </span>
+                <p>
+                    {{movie.subtitle|safe}}
+                </p>
+            </div>
+
+            <div class="clearfix"></div>
+            
+        </movie>
+    </div>
+{% endfor %}
+

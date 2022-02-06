@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/logo.ico' %}"/>
+    <title>
+        {% block title %}
+        {% endblock %}
+        | Adrian Farji 2021
+    </title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}">
+
+</head>
+
+<body>
+    <header>	
+
+
+        {% if user.email %}
+            <div id="register">
+                <ul>
+                    <li>
+                        <strong id="bienvenido">Welcome {{request.user.first_name|title}} &#709;</strong>
+                        <ul>
+                            <li>
+                                <a href="{% url 'userdata' %}">User data</a>
+                            </li>
+                        </ul>
+                    </li>                        
+                </ul>
+
+                <strong>|</strong>
+
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        {% else %}
+
+            <div id="register">
+                <a href="{% url 'register'%}">Register</a>
+                <strong>|</strong>
+                <a href="{% url 'login'%}">Login</a>
+            </div>
+        {% endif %}
+
+        <div id="logotipo">
+            <img src="{% static 'images/logo.svg' %}" />
+            <h1>Farji Cinema</h1>
+        </div>
+    
+        
+
+    </header>
+    <div class="barracabecera">
+        <span class="esquina-izquierdacabe"></span>
+        <span class="relleno-barracabe"></span>
+        <span class="esquina-derechacabe"></span>
+    </div>
+
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index'%}">Index</a>
+            </li>
+            {% if user.email %}
+                {% for page in pages %}
+                    <li>
+                        <a href="{% url 'page' page.2 %}">{{ page.1 }}</a>
+                    </li>
+                {% endfor %}
+
+                <li>
+                    <a href="{% url 'list_tvshows'%}">Tv Shows</a>
+
+                </li>
+
+
+                <li>
+                    <a href="{% url 'list_movies'%}">Movies</a>
+
+                </li>
+
+
+                <li>
+                    <a href="{% url 'movies-and-tvshows'%}">Categories</a>
+                        <ul>
+                            {% for category in categories %}
+                                <li>
+                                    <a href="{% url 'category' category.0 %}">{{ category.1 }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                </li>
+            {% endif %}
+
+        </ul>
+
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            
+            {% block content %}
+            <strong>Contenido original del bloque</strong>
+            {% endblock %}
+         </div>
+
+    </div>
+
+    
+
+    <footer>
+        Adrian Farji &copy; - {% now "d/m/Y" %}
+    </footer>
+</body>
+
+</html>

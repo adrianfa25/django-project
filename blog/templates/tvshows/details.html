@@ -1,0 +1,22 @@
+{% extends 'layouts/layouts.html'%}
+
+{%block title %}{{tvshow.title}}{%endblock%}
+
+{%block content%}
+    {% if tvshow.image != 'null'%}
+        <div class="image-wrapper">
+            <img class="image" src="{{tvshow.image.url}}" />
+        </div>
+    {%endif%}
+    <h1 class="title">{{tvshow.title}}</h1>
+    <span class="date">{{tvshow.created_at}}</span>
+    <p class="subtitle">
+        {{tvshow.subtitle|safe}}
+    </p>
+    
+    <div class="content-detail">
+        {{tvshow.content|safe}}
+
+    </div>
+{%endblock%}
+

@@ -1,0 +1,20 @@
+<div class="pagination">
+    {% if tvshows.has_previous %}
+        <a href="?page=1" class="asd">&laquo;First</a>
+        <a href="?page={{ tvshows.previous_page_number }}" class="asd">
+            Previous
+        </a>
+    {% endif %}
+
+
+    <span class="actual">
+        Page {{tvshows.number}} of {{ tvshows.paginator.num_pages }}
+    </span>
+        {% if tvshows.has_next %}
+            <a href="?page={{ tvshows.next_page_number }}" class="asd">
+                Next
+            </a>
+            <a href="?page={{tvshows.paginator.num_pages}}" class="asd">Last &raquo;</a>
+  
+    {% endif %}
+</div>

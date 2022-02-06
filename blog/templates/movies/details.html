@@ -1,0 +1,22 @@
+{% extends 'layouts/layouts.html'%}
+
+{%block title %}{{movie.title}}{%endblock%}
+
+{%block content%}
+    {% if movie.image != 'null'%}
+        <div class="image-wrapper">
+            <img class="image" src="{{movie.image.url}}" />
+        </div>
+    {%endif%}
+    <h1 class="title">{{movie.title}}</h1>
+    <span class="date">{{movie.created_at}}</span>
+    <p class="subtitle">
+        {{movie.subtitle|safe}}
+    </p>
+    
+    <div class="content-detail">
+        {{movie.content|safe}}
+
+    </div>
+{%endblock%}
+

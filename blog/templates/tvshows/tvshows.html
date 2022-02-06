@@ -1,0 +1,37 @@
+{% for tvshow in tvshows%}
+    <div class="article-item">
+        <tvshow>
+            {% if tvshow.image != 'null'%}
+                <a href="{% url 'tvshow' tvshow.id %}">
+                    <div class="image">
+                        <figure>
+                            <img src="{{tvshow.image.url}}" />
+                        </figure>
+                        <span>{{tvshow.title}}</span>
+                    </div>
+                </a>
+            {% endif %}
+        
+            
+            <div class="data">
+            <h2>
+                <a href="{% url 'tvshow' tvshow.id %}" class="urls">{{tvshow.title}}</a>
+            </h2>
+                {% for category in tvshow.categories.all%}
+                    <a href="{% url 'category' category.id %}" class="urls">{{category.name}}</a>
+                    {% if not forloop.last %}-{% endif %}
+                {% endfor %}
+                <span class="date">
+                    <!--el firs y last name lo podemos ver desde la base de datos. No siempre se llama asi. Es cosa del programa.-->
+                    {{ tvshow.user.first_name|title }} {{ tvshow.user.last_name|title }}
+                    |
+                    {{ tvshow.created_at }}
+                </span>
+                <p>
+                    {{tvshow.subtitle|safe}}
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </tvshow>
+    </div>
+{% endfor %}

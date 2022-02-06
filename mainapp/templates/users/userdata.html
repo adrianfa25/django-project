@@ -1,0 +1,26 @@
+{% extends 'layouts/layouts.html'%}
+
+{%block title %}{{title}}{%endblock%}
+
+{%block content%}
+    <h1>{{title}}</h1>
+<hr/>
+<br/>
+<div class="userdata">
+    <h3>Username: </h3> {{request.user.username}}
+    <h3>First name: </h3> {{request.user.first_name|title}}
+    <h3>Last name: </h3> {{request.user.last_name|title}}
+    <h3>Email: </h3> {{request.user.email|title}}
+    <h3>Register date: </h3> {{request.user.date_joined|date}} at {{request.user.date_joined|time}}
+    <h3>Last Login: </h3> {{request.user.last_login|date}} at {{request.user.last_login|time}}
+    <h3>User stataus: </h3> {% if state == 'Is admin' %}
+                                <strong style="color: green;">{{state}}</strong>
+                            {% else %}
+                                <strong style="color: red;">{{state}}</strong>
+                            {% endif %}
+
+</div>
+
+
+
+{%endblock%}

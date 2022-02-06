@@ -1,0 +1,556 @@
+/*Estilos generales*/
+
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.box p, .box h2, .box h3, .box ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box ul, .box ol{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+/*Estilos cabecera*/
+
+header{
+    width:1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0px auto;
+    box-shadow: 0px 32px 22px gray;
+}
+
+#logotipo h1{
+    display: block;
+    letter-spacing: 2px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    font-weight: lighter;
+    color: #2ba977;
+    padding-top: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 140px;
+    */
+}
+
+#logotipo img{
+    display: block;
+    float:left;
+    width: 80px;
+    margin-top: 25px;
+}
+
+#logotipo {
+    width: 30%;
+    height: 130px;
+    margin: 0 auto;
+}
+#register {
+    float:right;
+    margin-top: 60px;
+    margin-right: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+
+
+}
+#register a, #register strong{
+    color:rgb(226, 226, 226);
+    padding: 10px;
+}
+
+#register a:hover, #bienvenido:hover{
+    background-color: #2ba977;
+    transition: all 300ms;
+    box-shadow: 0px 0px 5px #333333 inset;
+    color: white;
+}
+
+#register > ul{
+    list-style: none;
+    float: left;
+}
+
+#register > ul > li >ul{
+    display: None;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 0px 6px rgb(66, 62, 62);
+}
+
+#register > ul > li:hover > ul{
+    display: block;
+    color: white;
+    margin-top: 9px;
+    list-style: None;
+}
+
+#register > ul > li:hover > ul > li{
+    background: #8a8987;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*Estilos barra de navegacion*/
+nav{
+    
+    width: 1250px;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    text-align: center;    
+    
+}
+
+nav > ul{
+    list-style: none;
+    text-decoration: none;    
+    display: inline-block;
+    
+
+
+}
+nav > ul > li{
+    line-height: 40px;
+    float: left;
+}
+
+nav > ul > li > a{
+    
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #D1D4D6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+
+
+nav > ul > li > a:hover{
+    background-color: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset;
+    color: white;
+    transition: all 300ms;
+}
+
+
+
+
+nav > ul >li >ul{
+    display: None;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 6px 6px 6px gray;
+}
+nav > ul > li:hover >ul{
+    display: block;
+    color: white;
+    margin: 0px;
+    list-style: None;
+}
+nav > ul > li:hover >ul >li{
+    background: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+nav > ul > li:hover >ul >li a{
+   color: #666;
+   transition: all 300ms;
+}
+nav > ul > li:hover >ul >li:hover{
+    background-color: #2ba977;
+ }
+nav > ul > li:hover >ul >li:hover a{
+    color: white;
+    display: block;
+}
+
+
+
+
+.barra{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.esquina-izquierda{
+    display:block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float:left;
+}
+.esquina-derecha{
+    display:block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float:right;
+}
+.relleno-barra{
+    display:block;
+    width: 1210px;
+    height: 10px;
+    background: #2B2F30;
+    float: left;
+}
+
+.barracabecera{
+    width: 1212px;
+    margin:0 auto;
+}
+
+.esquina-izquierdacabe{
+    display:block;
+    border-left: 20px solid transparent;
+    border-top: 20px solid #2B2F30;
+    float:left;
+}
+.esquina-derechacabe{
+    display:block;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #2B2F30;
+    float:right;
+}
+.relleno-barracabe{
+    display:block;
+    width: 1172px;
+    height: 20px;
+    background: #2B2F30;
+    float: left;
+}
+
+
+/*Estilos contenido central*/
+
+#content{
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+ }
+
+ .box h1{
+     font-weight: bolder;
+ }
+
+.box{
+    background: white;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.box form{
+    width:40%;
+}
+
+.box form input,
+.box form label{
+    display:block;
+    padding:5px;
+    margin-left: 0px;
+}
+
+
+.box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
+.box form textarea,
+.box form select{
+    width:100%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error{
+    color: red;
+    text-shadow: 0px, 0px, 1px black;
+    font-weight: 900;
+
+}
+.errorlist ul, .errorlist li{
+    color: red;
+    text-shadow: 0px, 0px, 4px black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+
+.message,
+.alert-succes,
+.alert{
+    padding:20px;
+    background: #2ba977;
+    text-align: center;
+    color:white;
+    margin-bottom: 10px;
+}
+.alert-warning{
+    background: rgb(160, 43, 43);
+}
+
+.box form select{
+    width: 100px;
+}
+.box input[type="file"]{
+    padding: 0px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.box input[type="submit"],
+.box input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 15px;
+    background: #2ba977;
+    color: white;
+    border: 1px solid black;
+    transition: 300ms all;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+
+}
+
+.box input[type="submit"]:hover,
+.box input[type="button"]:hover,
+.box form button:hover{
+    cursor:pointer;
+    background: #154d36;
+    color: #1B1E1F;
+    transition: 300ms all;
+}
+
+
+
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;    
+}
+
+.date{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:gray;
+}
+
+.subtitle{
+    line-height: 25px;
+}
+
+.content-detail{
+    font-size: 30px;
+    display: block;
+    padding-top: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: justify;
+
+}
+
+.index-text{
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+}
+.article-item .image{
+    width:300px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.article-item .image figure img{
+    height: 200px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.article-item .image figure:hover img {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+.article-item h2{
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.article-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    
+}
+.article-item .btn{
+    display: block;
+    padding: 10px;
+    background: rgb(187, 57, 57);
+    color:white;
+    border: 1px solid black;
+    margin-top: 15px;
+    width: 100px;
+    text-align: center;
+
+}
+
+.urls {
+    color: black;
+    transition: 200ms;
+}
+
+.urls:hover {
+    text-shadow: 0px 0px 20px #2ba977;
+    transform: scale(1.50,1.50);
+}
+
+.images {
+    float:left;
+    margin-right: 40px;
+}
+.images img{
+    width: 400px;
+
+}
+
+
+.image-wrapper {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    float:left;
+    margin-right: 40px;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+.image-wrapper img {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: all 300ms;
+
+}
+
+.image-wrapper .image:hover{
+    transform: scale(1.1,1.1);
+
+}
+
+.pagination, .actual, .asd {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    transition: 300ms all;
+
+}
+
+
+.asd:hover{
+    color: #2ba977;
+    transition: 300ms all;
+
+}
+
+.userdata{
+    margin-top: 20px;
+    font-family: cursive;
+}
+.userdata h3{
+    margin-top: 20px;
+}
+
+
+footer{
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color: #D1D4D6;
+    text-align: center;
+    margin:0 auto;
+    margin-bottom:10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+
+
+
+
+/* Register and login form */
+.register-login{
+    margin-top: 30px;
+}
+
+.register-login 
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    border-radius: 5px;
+    border: 1px solid #8a8987;
+}
